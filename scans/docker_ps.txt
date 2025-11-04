@@ -1,0 +1,2 @@
+CONTAINER ID   IMAGE                  COMMAND      CREATED         STATUS         PORTS                                     NAMES
+981df328669c   vulnerables/web-dvwa   "/main.sh"   3 minutes ago   Up 3 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   dvwa
