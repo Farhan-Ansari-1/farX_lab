@@ -1,0 +1,80 @@
+[+] Starting mysql...
+Starting MariaDB database server: mysqld ..
+[+] Starting apache
+Starting Apache httpd web server: apache2.
+==> /var/log/apache2/access.log <==
+
+==> /var/log/apache2/error.log <==
+[Tue Nov 04 09:34:46.312181 2025] [mpm_prefork:notice] [pid 294] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Tue Nov 04 09:34:46.312354 2025] [core:notice] [pid 294] AH00094: Command line: '/usr/sbin/apache2'
+
+==> /var/log/apache2/other_vhosts_access.log <==
+
+==> /var/log/apache2/access.log <==
+192.168.56.101 - - [04/Nov/2025:09:48:56 +0000] "GET / HTTP/1.1" 302 479 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:09:48:56 +0000] "GET /login.php HTTP/1.1" 200 1048 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:09:48:57 +0000] "GET /dvwa/css/login.css HTTP/1.1" 200 741 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:09:48:57 +0000] "GET /dvwa/images/login_logo.png HTTP/1.1" 200 9374 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:09:48:57 +0000] "GET /favicon.ico HTTP/1.1" 200 1706 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:09:59:46 +0000] "POST /login.php HTTP/1.1" 302 337 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:09:59:46 +0000] "GET /setup.php HTTP/1.1" 200 2048 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:09:59:46 +0000] "GET /dvwa/css/main.css HTTP/1.1" 200 1445 "http://192.168.56.101:8080/setup.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:09:59:46 +0000] "GET /dvwa/js/dvwaPage.js HTTP/1.1" 200 815 "http://192.168.56.101:8080/setup.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:09:59:46 +0000] "GET /dvwa/images/logo.png HTTP/1.1" 200 5330 "http://192.168.56.101:8080/setup.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:09:59:46 +0000] "GET /dvwa/js/add_event_listeners.js HTTP/1.1" 200 626 "http://192.168.56.101:8080/setup.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:09:59:46 +0000] "GET /dvwa/images/spanner.png HTTP/1.1" 200 748 "http://192.168.56.101:8080/setup.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:43:45 +0000] "GET /setup.php HTTP/1.1" 200 2008 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+
+==> /var/log/apache2/error.log <==
+[Tue Nov 04 10:43:57.180947 2025] [:error] [pid 311] [client 192.168.56.101:35356] PHP Notice:  Constant DVWA_WEB_PAGE_TO_ROOT already defined in /var/www/html/dvwa/includes/DBMS/MySQL.php on line 9, referer: http://192.168.56.101:8080/setup.php
+
+==> /var/log/apache2/access.log <==
+192.168.56.101 - - [04/Nov/2025:10:43:57 +0000] "POST /setup.php HTTP/1.1" 302 338 "http://192.168.56.101:8080/setup.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:43:57 +0000] "GET /setup.php HTTP/1.1" 200 2188 "http://192.168.56.101:8080/setup.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:02 +0000] "GET /login.php HTTP/1.1" 200 1048 "http://192.168.56.101:8080/setup.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:04 +0000] "POST /login.php HTTP/1.1" 302 336 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:04 +0000] "GET /login.php HTTP/1.1" 200 1067 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:07 +0000] "POST /login.php HTTP/1.1" 302 336 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:07 +0000] "GET /login.php HTTP/1.1" 200 1065 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:09 +0000] "POST /login.php HTTP/1.1" 302 336 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:09 +0000] "GET /login.php HTTP/1.1" 200 1066 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:10 +0000] "POST /login.php HTTP/1.1" 302 336 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:10 +0000] "GET /login.php HTTP/1.1" 200 1066 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:11 +0000] "GET /login.php HTTP/1.1" 200 1191 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:11 +0000] "GET /dvwa/css/login.css HTTP/1.1" 200 741 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:11 +0000] "GET /dvwa/images/login_logo.png HTTP/1.1" 200 9374 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:11 +0000] "POST /login.php HTTP/1.1" 302 336 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:11 +0000] "GET /login.php HTTP/1.1" 200 1066 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:11 +0000] "POST /login.php HTTP/1.1" 302 336 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:11 +0000] "GET /login.php HTTP/1.1" 200 1066 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:26 +0000] "GET / HTTP/1.1" 302 337 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:26 +0000] "GET /login.php HTTP/1.1" 200 1048 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:38 +0000] "POST /login.php HTTP/1.1" 302 337 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:38 +0000] "GET /login.php HTTP/1.1" 200 1076 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:40 +0000] "POST /login.php HTTP/1.1" 302 336 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:40 +0000] "GET /login.php HTTP/1.1" 200 1068 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:40 +0000] "POST /login.php HTTP/1.1" 302 336 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:40 +0000] "GET /login.php HTTP/1.1" 200 1068 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:41 +0000] "POST /login.php HTTP/1.1" 302 336 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:41 +0000] "GET /login.php HTTP/1.1" 200 1067 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:44:44 +0000] "GET /login.php HTTP/1.1" 200 1048 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:48:44 +0000] "\x16\x03\x01\x07O\x01" 400 0 "-" "-"
+192.168.56.101 - - [04/Nov/2025:10:48:44 +0000] "\x16\x03\x01\x02~\x01" 400 0 "-" "-"
+192.168.56.101 - - [04/Nov/2025:10:52:58 +0000] "\x16\x03\x01\x07O\x01" 400 0 "-" "-"
+192.168.56.101 - - [04/Nov/2025:10:52:58 +0000] "\x16\x03\x01\x02~\x01" 400 0 "-" "-"
+192.168.56.101 - - [04/Nov/2025:10:52:59 +0000] "\x16\x03\x01\x07O\x01" 400 0 "-" "-"
+192.168.56.101 - - [04/Nov/2025:10:52:59 +0000] "\x16\x03\x01\x02~\x01" 400 0 "-" "-"
+192.168.56.101 - - [04/Nov/2025:10:53:00 +0000] "\x16\x03\x01\x07O\x01" 400 0 "-" "-"
+192.168.56.101 - - [04/Nov/2025:10:53:00 +0000] "\x16\x03\x01\x02~\x01" 400 0 "-" "-"
+192.168.56.101 - - [04/Nov/2025:10:53:00 +0000] "\x16\x03\x01\x07O\x01" 400 0 "-" "-"
+192.168.56.101 - - [04/Nov/2025:10:53:00 +0000] "\x16\x03\x01\x02~\x01" 400 0 "-" "-"
+192.168.56.101 - - [04/Nov/2025:10:53:17 +0000] "GET / HTTP/1.1" 302 337 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:53:17 +0000] "GET /login.php HTTP/1.1" 200 1049 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:53:24 +0000] "POST /login.php HTTP/1.1" 302 337 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:53:24 +0000] "GET /login.php HTTP/1.1" 200 1067 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:53:26 +0000] "POST /login.php HTTP/1.1" 302 336 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:53:26 +0000] "GET /login.php HTTP/1.1" 200 1066 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:53:28 +0000] "POST /login.php HTTP/1.1" 302 336 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:53:28 +0000] "GET /login.php HTTP/1.1" 200 1065 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:53:28 +0000] "POST /login.php HTTP/1.1" 302 336 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
+192.168.56.101 - - [04/Nov/2025:10:53:28 +0000] "GET /login.php HTTP/1.1" 200 1066 "http://192.168.56.101:8080/login.php" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0"
