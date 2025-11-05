@@ -1,0 +1,1 @@
+DVWA logged in successfully and security set to Low on Wed Nov  5 07:53:06 PM UTC 2025
